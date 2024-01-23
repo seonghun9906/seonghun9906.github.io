@@ -61,7 +61,7 @@ function togglePasswordVisibility(inputId) {
     phoneNumber.length == 0 || address.length == 0 || address2.length == 0){
       alert("입력칸을 빈곳 없게 입력해주세요.");
     }else {
-      window.location.href = "../html/Login.html"
+      location.href = "Login.html"
     }
     
   }
