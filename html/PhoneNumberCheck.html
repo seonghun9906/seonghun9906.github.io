@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header">
+        <h2>전화번호 인증 확인</h2>
+        <h3>(통신사별 인증이 됬다는 가정 인증번호 받기)</h3>
+        <button onclick="randomNumber()"> 인증번호 받기 </button><br>
+        인증번호 : <h3 id="number" readonly> </h3>
+    </div>
+    <div id="numberCheck1">
+        <br>
+        인증 번호 입력 칸 : <input type="text" id="numberCheck" onblur="numberCheck()">
+        <button onclick="numberCheck()"> 인증번호 확인 </button><br>
+        <a href="signUp.html" id="signUpPage"></a>
+        <h3 id="notCheck"></h3>
+    </div>
+
+</body>
+<script>
+    var buttonClicked = false;
+
+    const randomNumber = () => {
+        if (!buttonClicked) {
+            var code = "";
+            for (var i = 0; i < 4; i++) {
+                var randomNum1 = Math.floor(Math.random() * 10);
+                code += randomNum1;
+            }
+            console.log(code);
+            document.getElementById("number").value = code;
+            document.getElementById("number").innerText = code;
+
+            buttonClicked = true;
+            document.getElementById("receiveButton").disabled = true;
+        }
+    }
+
+    const numberCheck = () => {
+        const numberCheck = document.getElementById("numberCheck").value;
+        const number = document.getElementById("number").value;
+        console.log(numberCheck);
+        console.log(number);
+        const signUpPage = document.getElementById("signUpPage");
+        const notCheck = document.getElementById("notCheck");
+        if (number === numberCheck) {
+            signUpPage.innerText = "회원가입 페이지로 돌아가기."
+        } else {
+            notCheck.innerText = "올바르지 않은 인증번호 입니다."
+        }
+    }
+</script>
+
+</html>
