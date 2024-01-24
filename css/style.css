@@ -85,9 +85,18 @@ h3 span{
   color : black;
 }
 
+.profile-text{
+  padding-left: 2%;
+}
 
 
+.development-text{
+  padding-left: 24%;
+}
+.academy-class{
+  padding-left : 15%;
+}
 
-
-
-
+.C_language{
+  padding-left: 32%;
+}
