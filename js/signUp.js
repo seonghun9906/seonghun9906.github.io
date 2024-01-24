@@ -23,7 +23,7 @@ function togglePasswordVisibility(inputId) {
     if(phoneNumber1.length ==0){
       phoneNumber_check1.innerText = "전화번호를 입력해 주세요.";
       phoneNumber_check1.style.color = "red";
-    }else if(phoneNumber1.match(exp) || phoneNumber1.match){
+    }else if(phoneNumber1.match(exp) || phoneNumber1.match(exp1)){
       phoneNumber_check2.innerText =" 전화번호 인증번호 받기 ";
       phoneNumber_check1.innerText = "올바른 전화번호 형식입니다.";
       phoneNumber_check1.style.color = "green";
