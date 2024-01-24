@@ -7,6 +7,8 @@ function togglePasswordVisibility(inputId) {
   const emailCheck = () => {
 
     
+
+    
   }
   
 
@@ -15,12 +17,13 @@ function togglePasswordVisibility(inputId) {
     const phoneNumber1 = document.getElementById("phoneNumber").value;
     // console.log(phoneNumber1)
     const exp = /^\d{3}-\d{4}-\d{4}$/;
+    const exp1 = /^\d{11}$/
     const phoneNumber_check1 = document.getElementById("phoneNumber_check");
     const phoneNumber_check2 = document.getElementById("phoneNumberCheck");
     if(phoneNumber1.length ==0){
       phoneNumber_check1.innerText = "전화번호를 입력해 주세요.";
       phoneNumber_check1.style.color = "red";
-    }else if(phoneNumber1.match(exp)){
+    }else if(phoneNumber1.match(exp) || phoneNumber1.match){
       phoneNumber_check2.innerText =" 전화번호 인증번호 받기 ";
       phoneNumber_check1.innerText = "올바른 전화번호 형식입니다.";
       phoneNumber_check1.style.color = "green";
